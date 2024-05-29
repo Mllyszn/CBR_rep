@@ -13,7 +13,9 @@
     </div>
 
     <div class="btn">
-      <button>Take the test</button>
+      <a href="assets/php/question.php">
+        <button>Take the test</button>
+      </a>
     </div>
   </body>
 </html>
