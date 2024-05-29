@@ -21,8 +21,6 @@
         echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
         ?>
     </div>
-<!-- Display the countdown timer in an element -->
-<p id="demo"></p>
 
 <script src="../js/clock.js"></script>
 
