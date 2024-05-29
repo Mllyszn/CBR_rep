@@ -1,6 +1,5 @@
 # CBR_rep
 
-
 # 20 questions
 (id van de questions)
 (ga naar questions.json om de vragen te vinden)
