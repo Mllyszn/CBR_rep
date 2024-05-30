@@ -1,10 +1,7 @@
-<<<<<<< Updated upstream
-=======
 <?php
-include "backend/connect_db.php";
+include "backend/core/connect_db.php";
 ?>
 
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,15 +19,12 @@ include "backend/connect_db.php";
 
   <div class="btn">
     <a href="assets/core/question.php">
-      <button>Take the test</button>
+      <p>Take the test</p>
     </a>
   </div>
 </body>
 </html>
-<<<<<<< Updated upstream
-=======
 
 <?php
 include "backend/core/footer.php";
 ?>
->>>>>>> Stashed changes

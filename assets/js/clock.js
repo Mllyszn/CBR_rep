@@ -1,3 +1,6 @@
+//test page 
+
+//proef 1
 const countdownElement = document.getElementById('countdown');
 
 let duration = 60;
@@ -21,11 +24,9 @@ function startCountdown() {
         }
     }, 1000);
 }
-
 startCountdown();
 
-// proef test
-
+// proef 2
 document.addEventListener('DOMContentLoaded', () => {
     const countdownElement = document.getElementById('countdown');
     
@@ -50,6 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 1000);
     }
-    
     startCountdown();
 });
