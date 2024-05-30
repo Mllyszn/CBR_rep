@@ -1,28 +1,55 @@
-// Set the date we're counting down to
-var countDownDate = new Date("30 may, 2024 12:00:00").getTime();
+//test page 
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+//proef 1
+const countdownElement = document.getElementById('countdown');
 
-  // Get today's date and time
-  var now = new Date().getTime();
+let duration = 60;
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+function startCountdown() {
+    let timeRemaining = duration;
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const countdownInterval = setInterval(() => {
+        let minutes = Math.floor(timeRemaining / 60);
+        let seconds = timeRemaining % 60;
 
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+        countdownElement.textContent = `${minutes}:${seconds}`;
+
+        timeRemaining--;
+        if (timeRemaining < 0) {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = "Time is done";
+        }
+    }, 1000);
+}
+startCountdown();
+
+// proef 2
+document.addEventListener('DOMContentLoaded', () => {
+    const countdownElement = document.getElementById('countdown');
+    
+    let duration = 60;
+    
+    function startCountdown() {
+        let timeRemaining = duration;
+    
+        const countdownInterval = setInterval(() => {
+            let minutes = Math.floor(timeRemaining / 60);
+            let seconds = timeRemaining % 60;
+    
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+    
+            countdownElement.textContent = `${minutes}:${seconds}`;
+    
+            timeRemaining--;
+            if (timeRemaining < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.textContent = "Time is done";
+            }
+        }, 1000);
+    }
+    startCountdown();
+});
