@@ -1,3 +1,10 @@
+
+<?php
+include "backend/connect_db.php";
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,3 +26,7 @@
     </div>
   </body>
 </html>
+
+<?php
+include "backend/core/footer.php";
+?>
