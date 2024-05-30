@@ -53,12 +53,3 @@ while ($sql_info->fetch()) {
 
 
 ?>
-
-
-
-
-
-
-
-
-
