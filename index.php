@@ -1,9 +1,8 @@
 
+
 <?php
-include "backend/connect_db.php";
+include "backend/core/header.php";
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
