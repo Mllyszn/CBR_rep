@@ -34,7 +34,7 @@ var language_text =
     FAILED : "Gezakt",
     PASSED : "Geslaagd",
     BACK : "TERUG",
-
+ 
     // Chapter select
     SELECT : "Selecteer hoofdstukken",
     START : "Start met oefenen",
