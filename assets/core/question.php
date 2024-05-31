@@ -1,8 +1,5 @@
-<?php include "../../backend/core/header.php";
 
-
-
-
+<?php include "../../backend/core/header.php" 
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +14,10 @@
 <BODY>
     <div class="question">
         <div class="quote">
+
             <?= $questions;
+
+            
             ?>
         </div>
         <br>
@@ -40,6 +40,9 @@
 
 ?>
        
+
+        
+      
     </div>
 
     <?php
