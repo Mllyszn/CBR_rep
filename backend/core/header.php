@@ -35,9 +35,11 @@ img.photo,
 chapter.category
 ;");
 $sql_info->bind_param("i",$idArray[$t] );
-
 $sql_info->execute();
 $sql_info->bind_result($id, $questions, $type, $feedback, $answers, $photo, $category);
+$sql_info->fetch();
+$answersArray = explode(",", $answers);
+
 
 
 
