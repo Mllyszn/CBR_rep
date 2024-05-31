@@ -14,14 +14,11 @@ include ("../../backend/core/header.php");
 <BODY>
 
     <div class="question">
-        <div class="timer">
-            <?php
-            include_once ("../core/klok.html")
-             ?>
-        </div>
-        <div class="q">
-            <?php
-            echo "Question";
+
+        <div class="quote">
+
+            <?= $questions;
+
             ?>
         </div>
         <br>
@@ -32,9 +29,25 @@ include ("../../backend/core/header.php");
         <br>
         <button>Answer A</button>
         <button>Answer B</button>
-        <button>Answer C</button>
-    </div>
+        <button>Answer C</button>  
+  
+        <?php
 
+        while ($sql_info->fetch()) {
+    $answersArray = explode(",", $answers);
+    foreach ($answersArray as $answerString) {
+        list($answer, $true_false) = explode('_', $answerString);
+        ?><button><?=$answer?></button><?php
+        
+    }
+}
+?>
+       
+
+    </div>
+            <?php
+            include_once ("../core/klok.html")
+             ?>
 
 </BODY>
 

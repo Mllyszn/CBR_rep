@@ -1,5 +1,5 @@
 <?php
-include "backend/core/connect_db.php";
+include "backend/core/header.php";
 ?>
 
 <!DOCTYPE html>
