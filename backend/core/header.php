@@ -24,6 +24,7 @@ FROM `exam`
 INNER JOIN answers ON answers.Q_id = exam.id
 INNER JOIN img ON img.Q_id = exam.id 
 LEFT JOIN chapter ON chapter.id = exam.category_id
+
 where exam.id = ?
 GROUP BY 
 exam.id, 
@@ -37,9 +38,6 @@ $sql_info->bind_param("i",$idArray[$t] );
 
 $sql_info->execute();
 $sql_info->bind_result($id, $questions, $type, $feedback, $answers, $photo, $category);
-
-
-
 
 
 
