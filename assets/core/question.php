@@ -1,3 +1,8 @@
+
+<?php include "../../backend/core/header.php" 
+
+?>
+
 <!DOCTYPE html>
 
 <HEAD>
@@ -10,8 +15,10 @@
 <BODY>
     <div class="question">
         <div class="quote">
-            <?php
-            echo "Vraag";
+
+            <?= $questions;
+
+            
             ?>
         </div>
         <br>
@@ -22,9 +29,21 @@
         <?php
         echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
         echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
-        ?>
-        <button>Answer B</button>
-        <button>Answer C</button>
+        
+        
+        while ($sql_info->fetch()) {
+    $answersArray = explode(",", $answers);
+    foreach ($answersArray as $answerString) {
+        list($answer, $true_false) = explode('_', $answerString);
+        ?><button><?=$answer?></button><?php
+        
+    }
+}
+?>
+       
+
+        
+      
     </div>
 
     <?php

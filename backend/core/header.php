@@ -1,5 +1,5 @@
 <?php
-include "backend/connect_db.php";
+include "connect_db.php";
 
 $t = 0;
 
@@ -7,6 +7,7 @@ $sql_id = $con->prepare("SELECT DISTINCT GROUP_CONCAT(id) FROM exam;");
 $sql_id->execute();
 $sql_id->bind_result($id);
 $sql_id->fetch();
+$sql_id->close();
 $idArray = explode(",", $id);
 
 
@@ -23,6 +24,7 @@ FROM `exam`
 INNER JOIN answers ON answers.Q_id = exam.id
 INNER JOIN img ON img.Q_id = exam.id 
 LEFT JOIN chapter ON chapter.id = exam.category_id
+where exam.id = ?
 GROUP BY 
 exam.id, 
 exam.questions, 
@@ -30,23 +32,13 @@ exam.type,
 exam.feedback, 
 img.photo, 
 chapter.category
-where exam.category_id = ?
 ;");
 $sql_info->bind_param("i",$idArray[$t] );
 
 $sql_info->execute();
 $sql_info->bind_result($id, $questions, $type, $feedback, $answers, $photo, $category);
 
-$sql_info->execute();
-$sql_info->bind_result($id, $questions, $type, $feedback, $answers, $photo, $category);
 
-while ($sql_info->fetch()) {
-    $answersArray = explode(",", $answers);
-    foreach ($answersArray as $answerString) {
-        list($answer, $true_false) = explode('_', $answerString);
-        
-    }
-}
 
 
 
