@@ -22,7 +22,11 @@ include "backend/core/connect_db.php";
       <p>Take the test</p>
     </a>
   </div>
+  <?php
+  include "assets/core/validation.php";
+  ?>
 </body>
+
 </html>
 
 <?php

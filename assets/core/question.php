@@ -14,6 +14,7 @@ include ("../../backend/core/header.php");
 <BODY>
 
     <div class="question">
+<<<<<<< Updated upstream
         <div class="timer">
             <?php
             include_once ("../core/klok.html")
@@ -22,6 +23,13 @@ include ("../../backend/core/header.php");
         <div class="q">
             <?php
             echo "Question";
+=======
+        <?php
+        include_once ("../core/klok.html")
+            ?>
+        <div class="quote">
+            <?= $questions;
+>>>>>>> Stashed changes
             ?>
         </div>
         <br>
@@ -33,9 +41,26 @@ include ("../../backend/core/header.php");
         <button>Answer A</button>
         <button>Answer B</button>
         <button>Answer C</button>
+<<<<<<< Updated upstream
     </div>
 
 
+=======
+
+        <?php
+
+        while ($sql_info->fetch()) {
+            $answersArray = explode(",", $answers);
+            foreach ($answersArray as $answerString) {
+                list($answer, $true_false) = explode('_', $answerString);
+                ?><button><?= $answer ?></button>
+                <?php
+
+            }
+        }
+        ?>
+    </div>
+>>>>>>> Stashed changes
 </BODY>
 
 </html>
