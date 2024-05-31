@@ -1,8 +1,14 @@
 <?php
 include "connect_db.php";
 
-$t = 0;
+$t = isset($_POST['t']) ? $_POST['t'] : 0;
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Increment $t
+    $t++;
+}
+
+echo $t;
 $sql_id = $con->prepare("SELECT DISTINCT GROUP_CONCAT(id) FROM exam;");
 $sql_id->execute();
 $sql_id->bind_result($id);
