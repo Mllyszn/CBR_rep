@@ -26,15 +26,19 @@ include "../../backend/core/header.php"
         <div class="image">
             <img src="../../public/assets/img/<?= $photo ?> " alt="" width="500">
         </div>
+
+       
+<?php
+        echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
+        echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
         
-  
-        <?php
+    foreach ($answersArray as $answerString) {
+        list($answer, $true_false) = explode('_', $answerString);
+        ?><button><?=$answer?></button><?php
+        
+    }
 
-        echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
-        echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
 
-        foreach ($answersArray as $answerString) {
-            list($answer, $true_false) = explode('_', $answerString);
         ?>
             <form action="question.php" method="post" onsubmit="return checkValue(this)">
                 <input type="hidden" name="tup" value="<?= $true_false ?>">
