@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2024 at 03:17 PM
+-- Generation Time: May 31, 2024 at 12:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,51 +40,58 @@ CREATE TABLE `answers` (
 
 INSERT INTO `answers` (`id`, `Q_id`, `answer`, `true_false`) VALUES
 (1, 4, 'People with auditory impairments', 0),
-(2, 4, 'Blind people', 0),
+(2, 4, 'Blind people', 1),
 (3, 4, 'People have trouble walking', 0),
 (4, 5, 'no', 0),
 (5, 6, 'yes', 0),
-(9, 6, 'Maximum speed', 0),
+(9, 6, 'Maximum speed', 1),
 (10, 6, 'Minimum speed', 0),
 (11, 6, 'Adversary speed', 0),
 (12, 7, 'no', 0),
-(13, 7, 'yes', 0),
+(13, 7, 'yes', 1),
 (14, 8, 'Symbol B', 0),
 (15, 8, 'Symbol A', 0),
-(16, 8, 'Neither', 0),
-(17, 9, 'brake', 0),
+(16, 8, 'Neither', 1),
+(17, 9, 'brake', 1),
 (18, 9, 'let go of gas', 0),
 (19, 9, 'nothing', 0),
-(20, 10, 'yes', 0),
+(20, 10, 'yes', 1),
 (21, 10, 'no', 0),
 (22, 11, 'Brake', 0),
-(23, 11, 'Let go of gas', 0),
+(23, 11, 'Let go of gas', 1),
 (24, 11, 'Nothing', 0),
-(25, 12, 'no', 0),
+(25, 12, 'no', 1),
 (26, 12, 'yes', 0),
 (27, 14, 'The concentration decreases', 0),
-(28, 14, 'The concentration improves', 0),
-(29, 13, 'More fuel use', 0),
+(28, 14, 'The concentration improves', 1),
+(29, 13, 'More fuel use', 1),
 (30, 13, 'less fuel use', 0),
 (31, 13, 'nothing', 0),
-(32, 15, '50 meters', 0),
+(32, 15, '50 meters', 1),
 (33, 15, '25 meters', 0),
 (34, 15, '100 meters', 0),
 (35, 16, 'Race track', 0),
-(36, 16, 'Roundabout', 0),
+(36, 16, 'Roundabout', 1),
 (37, 18, 'No vehicles', 0),
-(38, 18, 'Cyclists', 0),
+(38, 18, 'Cyclists', 1),
 (39, 18, 'Motor vehicles', 0),
 (40, 18, 'Sign A', 0),
 (41, 19, 'Sign B', 0),
 (42, 19, 'Transport of dangerous materials', 0),
-(43, 19, 'Deceleration lane motorway', 0),
+(43, 19, 'Deceleration lane motorway', 1),
 (44, 19, 'Diversion', 0),
-(45, 20, 'yes', 0),
+(45, 20, 'yes', 1),
 (46, 20, 'no', 0),
 (47, 21, 'Winter tyre', 0),
 (48, 21, 'Normal tyre', 0),
-(49, 21, 'Broad tyre', 0);
+(49, 21, 'Broad tyre', 1),
+(50, 2, '4 years', 0),
+(51, 2, '1 years', 1),
+(52, 2, '3 years', 0),
+(53, 3, '14 meters', 0),
+(54, 3, '5 meters', 1),
+(55, 3, '25 meters', 0),
+(56, 5, 'yes', 1);
 
 -- --------------------------------------------------------
 
@@ -238,7 +245,7 @@ ALTER TABLE `img`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `chapter`

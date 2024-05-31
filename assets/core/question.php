@@ -1,6 +1,4 @@
 
-
-
 <?php
 include "../../backend/core/header.php"
 
@@ -28,24 +26,12 @@ include "../../backend/core/header.php"
         <div class="image">
             <img src="../../public/assets/img/<?= $photo ?> " alt="" width="500">
         </div>
-        <br>
-        <button>Answer A</button>
-        <button>Answer B</button>
-        <button>Answer C</button>  
+        
   
         <?php
 
         echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
         echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
-        
-    foreach ($answersArray as $answerString) {
-        list($answer, $true_false) = explode('_', $answerString);
-        ?><button><?=$answer?></button><?php
-        
-    }
-
-
-
 
         foreach ($answersArray as $answerString) {
             list($answer, $true_false) = explode('_', $answerString);
