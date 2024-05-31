@@ -1,3 +1,4 @@
+
 <?php include "../../backend/core/header.php" 
 
 ?>
@@ -14,7 +15,10 @@
 <BODY>
     <div class="question">
         <div class="quote">
+
             <?= $questions;
+
+            
             ?>
         </div>
         <br>
@@ -37,6 +41,9 @@
 }
 ?>
        
+
+        
+      
     </div>
 
     <?php
