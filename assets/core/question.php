@@ -1,6 +1,4 @@
 
-
-
 <?php
 include "../../backend/core/header.php"
 
@@ -28,8 +26,9 @@ include "../../backend/core/header.php"
         <div class="image">
             <img src="../../public/assets/img/<?= $photo ?> " alt="" width="500">
         </div>
-       
 
+       
+<?php
         echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
         echo "<BUTTON TYPE=\'button\"  onClick=\"history.go(0)\" >Refresh</BUTTON>";
         
@@ -38,6 +37,7 @@ include "../../backend/core/header.php"
         ?><button><?=$answer?></button><?php
         
     }
+
 
         ?>
             <form action="question.php" method="post" onsubmit="return checkValue(this)">

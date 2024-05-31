@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $t++;
 }
 
-echo $t;
+
 $sql_id = $con->prepare("SELECT DISTINCT GROUP_CONCAT(id) FROM exam;");
 $sql_id->execute();
 $sql_id->bind_result($id);
